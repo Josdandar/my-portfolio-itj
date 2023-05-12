@@ -36,7 +36,7 @@ export default function About({skills}){
 export async function getStaticProps(){
     let skills = [];
     try {
-        const response = await fetch("https://itj-skillset-jose-default-rtdb.firebaseio.com/")
+        const response = await fetch("https://itj-skillset-jose-default-rtdb.firebaseio.com/skills.json")
         const data = await response.json();
         skills = data.split(",");
     } catch (error) {
